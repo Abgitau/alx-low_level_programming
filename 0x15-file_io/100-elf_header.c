@@ -75,8 +75,7 @@ void print_class(unsigned char *e_ident)
 	{
 	case ELFCLASSNONE:
 		printf("none\n");
-		break;
-	case ELFCLASS32:
+		break;	case ELFCLASS32:
 		printf("ELF32\n");
 		break;
 	case ELFCLASS64:
@@ -155,8 +154,7 @@ void print_osabi(unsigned char *e_ident)
 		break;
 	case ELFOSABI_SOLARIS:
 		printf("UNIX - Solaris\n");
-		break;
-	case ELFOSABI_IRIX:
+		break;	case ELFOSABI_IRIX:
 		printf("UNIX - IRIX\n");
 		break;
 	case ELFOSABI_FREEBSD:
@@ -195,7 +193,6 @@ void print_type(unsigned int e_type, unsigned char *e_ident)
 {
 	if (e_ident[EI_DATA] == ELFDATA2MSB)
 		e_type >>= 8;
-
 	printf(" Type: ");
 
 	switch (e_type)
